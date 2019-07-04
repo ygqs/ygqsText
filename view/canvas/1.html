@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本用法</title>
+  <style>
+    .f1{
+      border:1px solid #000;
+    }
+  </style>
+</head>
+<body>
+<canvas id="f1" class="f1" width="500" height="500"></canvas>
+<script>
+  var f1 = document.getElementById("f1");
+  //判断浏览器支持<canvas>元素
+  if(f1.getContext){
+    var context = f1.getContext("2d");
+    //取得浏览器支持的数据URI
+    var imgURI = f1.toDataURL("image/png");
+
+    //显示图像
+    var imgaes = document.createElement("img");
+    imgaes.src = imgURI;
+    document.body.appendChild(imgaes);
+  }
+</script>
+</body>
+</html>

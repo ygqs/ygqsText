@@ -1,0 +1,50 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8"> <!--charset是声明文档使用的字符编码，解决乱码问题主要用的就是它，值得一提的是，这个charset一定要写第一行，不然就可能会产生乱码了。-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/><!--百度会自动对网页进行转码，这个标签是禁止百度的自动转码-->
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title></title><!-- 页面标题<title>标签(head 头部必须) -->
+  <meta name="description" content="your description"><!-- 页面描述内容 description -->
+  <meta name="keywords" content="your keywords"><!-- 页面关键词 keywords -->
+  <meta name="author" content="安厦的"> <!-- 定义网页作者 author -->
+  <meta name="robots" content="index,follow"> <!-- 定义网页搜索引擎索引方式，robotterms 是一组使用英文逗号「,」分割的值，通常有如下几种取值：none，noindex，nofollow，all，index和follow。 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <!--viewport主要是影响移动端页面布局的--><!--content 参数：--><!--width viewport 宽度(数值/device-width)， height viewport 高度(数值/device-height)， initial-scale 初始缩放比例 ，maximum-scale 最大缩放比例 ，minimum-scale 最小缩放比例 ，user-scalable 是否允许用户缩放(yes/no)-->
+  <link rel="manifest" href="site.webmanifest"
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
+  your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- Add your site or application content here -->
+<p>Hello world! This is HTML5 Boilerplate.</p>
+<script src="js/vendor/modernizr-{{MODERNIZR_VERSION}}.min.js"></script>
+<script src="https://code.jquery.com/jquery-{{JQUERY_VERSION}}.min.js" integrity="{{JQUERY_SRI_HASH}}"
+        crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-{{JQUERY_VERSION}}.min.js"><\/script>')</script>
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga = function () {
+    ga.q.push(arguments)
+  };
+  ga.q = [];
+  ga.l = +new Date;
+  ga('create', 'UA-XXXXX-Y', 'auto');
+  ga('send', 'pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
+
+</html>

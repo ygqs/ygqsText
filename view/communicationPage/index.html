@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通讯页面</title>
+</head>
+<body>
+<script>
+  var ttt = {
+    'nameV':'hehe',
+    'heightHehe':'123',
+  };
+ var tts = JSON.stringify(ttt);
+ console.log(tts);
+   var p=window.open('communicationPage.html',tts);
+  var returnV = window.showModelDialog('communicationPage.html',tts);
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script src="asd.js"></script>
+  <style>
+    .asd {
+      overflow: hidden;
+      width: 550px;
+      height: 300px;
+      position: relative;
+      z-index: 0;
+    }
+
+    .asd * {
+      padding: 0;
+      margin: 0;
+      position: relative;
+    }
+
+    .asd ul li {
+      list-style-type: none;
+      float: left;
+      z-index: 1;
+    }
+    .asd .asdUl{
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .asd .asdLI {
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+
+    .asd .asdLIa {
+      display: block;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      text-decoration: none;
+    }
+    .asd img{
+      z-index: 99999;
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+    }
+
+  </style>
+</head>
+<body>
+<div class="header">
+
+</div>
+<div class="body">
+  <div id="tt" class="asd">
+    <ul class="asdUl">
+      <li class="asdLI"><a href="" class="asdLIa"><img class="asdLIImg" src="images/1.png" alt=""></a></li>
+      <li class="asdLI"><a href="" class="asdLIa"><img class="asdLIImg" src="images/2.png" alt=""></a></li>
+      <li class="asdLI"><a href="" class="asdLIa"><img class="asdLIImg" src="images/3.png" alt=""></a></li>
+      <li class="asdLI"><a href="" class="asdLIa"><img class="asdLIImg" src="images/4.png" alt=""></a></li>
+    </ul>
+  </div>
+</div>
+<script>
+  var ee = document.getElementById("str");
+  console.log(ee);
+  function asdName(str){
+      var name = document.getElementById(str);
+      name.style.width = "550px";
+      name.style.height = "300px"
+  }
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <title>Title</title>
+  <script src="../../dist/jquery/jquery-1.8.3.min.js"></script>
+</head>
+<body>
+<div id="aside_container">
+
+</div>
+<script >
+  $.get('widthofEachSCreen.html', function (aside) {
+    $('#aside_container').append(aside);
+  });
+  $.post('widthofEachSCreen.html', function (aside) {
+    $('#aside_container').append(aside);
+  });
+  $.get('http://192.168.1.180:2001/webdemo/h5/index.html?accid=htyx5bf7cfaf9a84e&token=5babe1f272e5e22e55c2139a50faba49#/contacts', function (aside) {
+    $('#aside_container').append(aside);
+  });
+</script>
+
+</body>
+</html>

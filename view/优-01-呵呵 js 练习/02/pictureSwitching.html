@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .imgWar {
+      margin: auto;
+      width: 500px;
+      height: 500px;
+      border: 0 solid;
+    }
+
+    .imgWar img {
+      width: auto;
+      height: auto;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+<div id="imgWar" class="imgWar">
+  <img src="https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=50fc711ddf1b0ef473e89e5eedc451a1/b151f8198618367a2e8a46ee23738bd4b31ce586.jpg" alt="">
+</div>
+<script>
+  /* 声明变量*/
+  var imgWar = document.getElementById("imgWar");
+  var imgess = document.getElementsByTagName('img');
+  var arrIMg = ["https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=50fc711ddf1b0ef473e89e5eedc451a1/b151f8198618367a2e8a46ee23738bd4b31ce586.jpg",
+    "https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=4bfc640817d5ad6eb5f962eab1c939a3/8718367adab44aedb794e128bf1c8701a08bfb20.jpg",
+    "https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=a45c64e436292df588c3aa158c335ce2/9345d688d43f87949470e9e5de1b0ef41ad53a69.jpg",
+    "https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=1057e22c6ed9f2d33f1122ef99ee8a53/3bf33a87e950352aadfff8c55f43fbf2b3118b65.jpg",
+    "https://ss0.baidu.com/94o3dSag_xI4khGko9WTAnF6hhy/image/h%3D300/sign=10b374237f0e0cf3bff748fb3a47f23d/adaf2edda3cc7cd90df1ede83401213fb80e9127.jpg",
+    "https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1712187699,3512222246&fm=15&gp=0.jpg",
+    "https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2859719634,4239030051&fm=26&gp=0.jpg",
+    "http://img1qn.moko.cc/2018-08-18/f7e33559-1ff3-4474-b112-f6362b0ec998.jpg?imageView2/2/w/915/h/915/q/85",
+    "http://img1qn.moko.cc/2018-08-18/6736430b-9637-45f8-9017-ce92dd778731.jpg?imageView2/2/w/915/h/915/q/85",
+    "http://img1qn.moko.cc/2018-07-26/b511cde1-5780-43e4-b474-f29a18fcd6ab.jpg?imageView2/2/w/915/h/915/q/85"
+  ];
+  var i =0;
+  console.log(imgess);
+  imgWar.onclick =function () {
+    i++;
+    imgess[0].src = arrIMg[i%10];
+    console.log(imgess.src);
+  }
+
+</script>
+</body>
+</html>

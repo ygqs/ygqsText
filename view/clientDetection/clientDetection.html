@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>IE5.0之前版本不支持document.getElementById()这个DOM方法</title>
+</head>
+<body>
+<div id="ee"></div>
+<script >
+  getElement(ee);
+  function getElement(id) {
+    if (document.getElementById){
+      console.log("document.getElementById");
+      return document.getElementById(id);
+    } else if (document.all){
+      console.log("document.all");
+      return document.all(id);
+    } else {
+      throw new Error ("No way ro retrieve element");
+    }
+  }
+</script>
+</body>
+</html>

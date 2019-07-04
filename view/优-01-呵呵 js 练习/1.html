@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<a href="" id="openApp">点击</a>
+<a href="" id="dowbtn">点击</a>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script >
+  $(function(){
+    //不同端下载链接
+    if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)))
+    {
+      $("#openApp").attr('href', 'https://itunes.apple.com/us/app/yi-wang-quan-cheng/id875785098?l=zh&ls=1&mt=8');
+      $("#dowbtn").attr('href', 'https://itunes.apple.com/us/app/yi-wang-quan-cheng/id875785098?l=zh&ls=1&mt=8');
+    } else if (navigator.userAgent.match(/android/i)) {
+      $("#openApp").attr('href', 'http://m.yiwang.com/android/yiwang.apk');
+      $("#dowbtn").attr('href', 'http://m.yiwang.com/android/yiwang.apk');
+    }
+    var ua = navigator.userAgent.toLowerCase();
+    if (ua.match(/MicroMessenger/i) == 'micromessenger')
+    {
+      if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i)) || (navigator.userAgent.match(/iPad/i)))
+      {
+        $("#openApp").attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.yiwang.mobile');
+        $("#dowbtn").attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.yiwang.mobile');
+      } else {
+        $("#openApp").attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.yiwang.mobile');
+        $("#dowbtn").attr('href', 'http://a.app.qq.com/o/simple.jsp?pkgname=com.yiwang.mobile');
+      }
+    }
+  })
+</script>
+</body>
+</html>

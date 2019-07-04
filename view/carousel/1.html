@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0085)http://zhanhu56.com/h5/freeSlider/?spm=a2c4e.11153940.blogcont635692.9.3c4d509bgFN99H -->
+<html lang="zh-CN" class="translated-ltr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+  <title>图片无缝轮播插件</title>
+  <style>
+    html {
+      background-color: #00b0e4;
+    }
+
+    body, ul, li {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    .container {
+      height: 300px;
+      margin: 100px auto;
+      padding: 60px 0;
+      overflow: hidden;
+    }
+
+    .container ul {
+      display: -webkit-flex;
+      display: flex;
+      height: 100%;
+    }
+
+    .container ul li {
+      -webkit-flex-shrink: 0;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 0;
+      width: 400px;
+      height: 100%;
+      padding: 5px;
+      box-sizing: border-box;
+      -webkit-transition: all .6s;
+      transition: all .6s;
+    }
+
+    .container ul li:hover {
+      z-index: 1;
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+    }
+
+    .container ul li img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      box-sizing: border-box;
+      border: 10px solid #fff;
+      box-shadow: 0 0 5px #333;
+    }
+  </style>
+  <link type="text/css" rel="stylesheet" charset="UTF-8" href="./css/translateelement.css">
+</head>
+<body>
+<div class="container">
+  <ul class="wrapper">
+    <li class="slide"><img src="./images/1.jpg" alt=""></li>
+    <li class="slide"><img src="./images/2.jpg" alt=""></li>
+    <li class="slide"><img src="./images/3.jpg" alt=""></li>
+    <li class="slide"><img src="./images/4.jpg" alt=""></li>
+  </ul>
+</div>
+
+
+<script>
+
+  window.onload = function () {
+
+    var oContainer = document.querySelector('.container'),
+      oWrapper = oContainer.querySelector('ul'),
+      oSlide = oWrapper.querySelectorAll('li');
+
+    var wrapperW = oSlide[0].offsetWidth * oSlide.length;
+    oWrapper.style.width = wrapperW * 2 + 'px';
+    oWrapper.innerHTML += oWrapper.innerHTML;
+
+    console.log(oContainer.offsetWidth);
+    if (wrapperW < oContainer.offsetWidth) {
+      oContainer.style.width = wrapperW + 'px';
+    }
+
+    var x = 0, timer = null;
+
+    var slideMove = function () {
+      timer = setInterval(function () {
+        x++;
+        if (x > wrapperW) {
+          x = 0;
+        }
+        oWrapper.style.transform = 'translate(' + (-x) + 'px)';
+      }, 10);
+    };
+
+    slideMove();
+    oContainer.addEventListener('mouseover', function () {
+      clearInterval(timer);
+    });
+    oContainer.addEventListener('mouseout', function () {
+      slideMove();
+    });
+
+  };
+
+</script>
+</body>
+</html>
